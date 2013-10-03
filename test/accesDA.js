@@ -40,7 +40,7 @@ describe('Test app', function () {
             });
       });
 
-      it('POST /etudiants. Test de la validation du code permanent. Ici le CP est invalide.', function (done) {
+      it('POST /etudiants. Devrait retourner une erreur de code permanent. Ici le CP est invalide.', function (done) {
          var body = {
             codePerm : 'AA1=;&00gf000',
             nomComplet : 'Pas bon le CP',
@@ -76,7 +76,7 @@ describe('Test app', function () {
             });
       });
 
-      it('POST /etudiants. Tenter d\'ajouter un nouvel étudiant en double.', function (done) {
+      it('POST /etudiants. Devrait tenter d\'ajouter un nouvel étudiant en double.', function (done) {
          var body = {
             codePerm : 'ZZZZ10000000',
             nomComplet : 'Joe',
@@ -112,7 +112,7 @@ describe('Test app', function () {
             });
       });
 
-      it('GET /etudiants devrait récupérer l\'étudiant.', function (done) {
+      it('GET /etudiant. Devrait récupérer l\'étudiant.', function (done) {
          request(url)
             .get('/etudiants/' + cId)
             .expect('Content-Type', /json/)

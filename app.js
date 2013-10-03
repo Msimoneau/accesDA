@@ -36,7 +36,7 @@ app.use(express['static'](path.join(__dirname, 'public'))); // JSLint. Syntaxe d
 app.use(app.router);
 
 
-// API pour l'accès au dossier académique.
+// API pour l'accès au dossier.
 app.get('/etudiants/:id', dossiers.chercherParId(db));
 app.get('/etudiants', dossiers.chercher(db, 10));
 app.post('/etudiants', dossiers.ajouterEtudiant(db));

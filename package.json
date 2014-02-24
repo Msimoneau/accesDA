@@ -1,17 +1,23 @@
 {
-  "name" : "accesDA",
-  "version" : "0.0.2",
-  "private" : true,
-  "scripts" : {
-    "start" : "node app.js"
+  "name": "accesDA",
+  "version": "0.0.2",
+  "private": true,
+  "scripts": {
+    "start": "node --harmony server.js"
   },
-  "dependencies" : {
-    "express" : "3.4.0",
-    "jade" : "*",
-    "mongodb" : "1.3.19",
-    "nconf" : "0.6.7",
-    "validator" : "1.5.1",
-    "mocha" : "1.13.0",
-    "supertest" : "0.8.0"
+  "dependencies": {
+    "express": "3.4.0",
+    "jade": "*",
+    "mongodb": "1.3.19",
+    "nconf": "0.6.7",
+    "validator": "1.5.1",
+    "mocha": "1.13.0",
+    "supertest": "0.8.0",
+    "amqp": "~0.1.8",
+    "redis": "~0.10.1",
+    "connect-redis": "~1.4.7",
+    "npmlog": "0.0.6",
+    "passport": "~0.2.0",
+    "passport-google": "~0.3.0"
   }
 }
